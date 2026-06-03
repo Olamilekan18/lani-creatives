@@ -1,0 +1,274 @@
+/* LANI CREATIVES — Custom Design Tokens & Components */
+:root {
+  --onyx: #0A0A0A;
+  --onyx-light: #141414;
+  --onyx-mid: #1a1a1a;
+  --gold: #C9A96E;
+  --gold-light: #D4BA85;
+  --gold-dark: #A88B4A;
+  --ivory: #FAF7F2;
+  --ivory-dim: #E8E4DD;
+  --terracotta: #C44D2B;
+  --forest: #1A3A2A;
+  --white: #FFFFFF;
+  --gray-400: #9ca3af;
+  --gray-600: #4b5563;
+}
+
+html { scroll-behavior: smooth; }
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--onyx);
+  color: var(--ivory);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-accent {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* --- Navbar --- */
+.navbar {
+  transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
+}
+.navbar.scrolled {
+  background: rgba(10,10,10,0.95) !important;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 2px 40px rgba(0,0,0,0.5);
+}
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--gold);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* --- Hero --- */
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.hero-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(10,10,10,0.3) 0%,
+    rgba(10,10,10,0.6) 50%,
+    rgba(10,10,10,0.95) 100%
+  );
+}
+.hero-placeholder {
+  background: linear-gradient(135deg, var(--onyx-mid) 0%, var(--onyx) 50%, var(--forest) 100%);
+}
+
+/* --- Section Divider --- */
+.section-divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* --- Service Cards --- */
+.service-card {
+  background: linear-gradient(145deg, rgba(26,26,26,0.8), rgba(20,20,20,0.95));
+  border: 1px solid rgba(201,169,110,0.1);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.service-card:hover {
+  border-color: rgba(201,169,110,0.4);
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 40px rgba(201,169,110,0.05);
+}
+.service-card .service-icon {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s;
+}
+.service-card:hover .service-icon {
+  transform: scale(1.15) rotate(-3deg);
+  color: var(--gold);
+}
+
+/* --- ACB Section --- */
+.acb-badge {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- Portfolio Grid --- */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.portfolio-item .portfolio-overlay {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background: linear-gradient(0deg, rgba(10,10,10,0.9) 0%, transparent 60%);
+}
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+.portfolio-item img,
+.portfolio-item .placeholder-img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.portfolio-item:hover img,
+.portfolio-item:hover .placeholder-img {
+  transform: scale(1.08);
+}
+
+/* --- Journal Cards --- */
+.journal-card {
+  background: var(--onyx-light);
+  border: 1px solid rgba(201,169,110,0.08);
+  transition: all 0.4s ease;
+}
+.journal-card:hover {
+  border-color: rgba(201,169,110,0.25);
+  transform: translateY(-6px);
+}
+
+/* --- Impact Counter --- */
+.impact-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--gold);
+}
+@media (min-width: 768px) {
+  .impact-number { font-size: 4.5rem; }
+}
+
+/* --- CTA Button --- */
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: var(--onyx);
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+.btn-gold::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.btn-gold:hover::before { opacity: 1; }
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(201,169,110,0.3);
+}
+.btn-gold span { position: relative; z-index: 1; }
+
+.btn-outline-gold {
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  transition: all 0.4s ease;
+}
+.btn-outline-gold:hover {
+  background: var(--gold);
+  color: var(--onyx);
+}
+
+/* --- Contact Form --- */
+.form-input {
+  background: rgba(26,26,26,0.8);
+  border: 1px solid rgba(201,169,110,0.15);
+  color: var(--ivory);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,169,110,0.1);
+}
+.form-input::placeholder {
+  color: var(--gray-400);
+}
+
+/* --- Footer --- */
+.footer-link {
+  transition: color 0.3s;
+}
+.footer-link:hover {
+  color: var(--gold);
+}
+
+/* --- Placeholder Images --- */
+.placeholder-img {
+  background: linear-gradient(135deg, var(--onyx-mid), var(--onyx-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(201,169,110,0.3);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* --- Mobile Menu --- */
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+/* --- Hamburger --- */
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--ivory);
+  transition: all 0.3s;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--onyx); }
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* --- Selection --- */
+::selection {
+  background: var(--gold);
+  color: var(--onyx);
+}
