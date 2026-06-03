@@ -98,9 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
         isMenuOpen = !isMenuOpen;
         
         if (isMenuOpen) {
-            // Open Menu
-            gsap.to(".line-1", { y: 3.5, rotation: 45, duration: 0.3 });
-            gsap.to(".line-2", { y: -3.5, rotation: -45, width: "100%", duration: 0.3 });
+            // Open Menu (X)
+            gsap.to(".line-1", { top: "15px", rotation: 45, duration: 0.3 });
+            gsap.to(".line-2", { opacity: 0, duration: 0.3 });
+            gsap.to(".line-3", { top: "15px", rotation: -45, duration: 0.3 });
             gsap.to(mobileMenu, { opacity: 1, pointerEvents: "auto", duration: 0.5 });
             
             gsap.fromTo(mobileLinks, 
@@ -108,9 +109,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 { y: 0, opacity: 1, duration: 0.5, stagger: 0.1, delay: 0.2, ease: "power2.out" }
             );
         } else {
-            // Close Menu
-            gsap.to(".line-1", { y: 0, rotation: 0, duration: 0.3 });
-            gsap.to(".line-2", { y: 0, rotation: 0, width: "75%", duration: 0.3 });
+            // Close Menu (Hamburger)
+            gsap.to(".line-1", { top: "8px", rotation: 0, duration: 0.3 });
+            gsap.to(".line-2", { opacity: 1, duration: 0.3 });
+            gsap.to(".line-3", { top: "22px", rotation: 0, duration: 0.3 });
             gsap.to(mobileMenu, { opacity: 0, pointerEvents: "none", duration: 0.5 });
         }
     });
@@ -233,5 +235,70 @@ document.addEventListener("DOMContentLoaded", () => {
         y: 50,
         opacity: 0,
         duration: 1
+    });
+
+    // Custom Dropdown Logic (Rich Version)
+    const dropdowns = document.querySelectorAll('.custom-dropdown');
+    dropdowns.forEach(dropdown => {
+        const selected = dropdown.querySelector('.dropdown-selected');
+        const selectedText = selected.querySelector('.selected-text');
+        const selectedIcon = selected.querySelector('.selected-icon');
+        const arrow = dropdown.querySelector('.dropdown-arrow');
+        const menu = dropdown.querySelector('.dropdown-menu');
+        const options = dropdown.querySelectorAll('.dropdown-option');
+
+        let isOpen = false;
+
+        const toggleDropdown = () => {
+            isOpen = !isOpen;
+            if (isOpen) {
+                menu.classList.remove('opacity-0', 'pointer-events-none', 'scale-y-95');
+                menu.classList.add('opacity-100', 'pointer-events-auto', 'scale-y-100');
+                if (arrow) arrow.classList.add('rotate-180');
+                
+                // Stagger in options
+                gsap.to(options, {
+                    y: 0, 
+                    opacity: 1, 
+                    duration: 0.4, 
+                    stagger: 0.05, 
+                    ease: "power2.out", 
+                    delay: 0.1
+                });
+            } else {
+                menu.classList.add('opacity-0', 'pointer-events-none', 'scale-y-95');
+                menu.classList.remove('opacity-100', 'pointer-events-auto', 'scale-y-100');
+                if (arrow) arrow.classList.remove('rotate-180');
+                
+                // Reset options immediately
+                gsap.set(options, { y: 10, opacity: 0 });
+            }
+        };
+
+        selected.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleDropdown();
+        });
+
+        options.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.stopPropagation();
+                // Update text
+                const optionText = option.querySelector('p.font-display').textContent;
+                selectedText.textContent = optionText;
+                
+                // Update icon HTML
+                const optionIconHTML = option.querySelector('svg').outerHTML;
+                selectedIcon.innerHTML = optionIconHTML;
+                
+                toggleDropdown();
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (isOpen && !dropdown.contains(e.target)) {
+                toggleDropdown();
+            }
+        });
     });
 });

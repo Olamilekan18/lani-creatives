@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initActiveNav();
   initContactForm();
+  initCustomDropdown();
 });
 
 // --- Navbar scroll effect ---
@@ -101,5 +102,68 @@ function initContactForm() {
       btn.disabled = false;
       btn.classList.remove('opacity-70');
     }, 3000);
+  });
+}
+
+// --- Custom Dropdown ---
+function initCustomDropdown() {
+  const dropdowns = document.querySelectorAll('.custom-dropdown');
+  dropdowns.forEach(dropdown => {
+    const selected = dropdown.querySelector('.dropdown-selected');
+    const selectedText = selected.querySelector('.selected-text');
+    const selectedIcon = selected.querySelector('.selected-icon');
+    const arrow = dropdown.querySelector('.dropdown-arrow');
+    const menu = dropdown.querySelector('.dropdown-menu');
+    const options = dropdown.querySelectorAll('.dropdown-option');
+
+    let isOpen = false;
+
+    const toggleDropdown = () => {
+      isOpen = !isOpen;
+      if (isOpen) {
+        menu.classList.remove('opacity-0', 'pointer-events-none', 'scale-y-95');
+        menu.classList.add('opacity-100', 'pointer-events-auto', 'scale-y-100');
+        if (arrow) arrow.classList.add('rotate-180');
+        
+        // Simple cascade animation for options using timeout
+        options.forEach((opt, idx) => {
+          setTimeout(() => {
+            opt.classList.remove('opacity-0', 'translate-y-2');
+            opt.classList.add('opacity-100', 'translate-y-0');
+          }, 100 + (idx * 50));
+        });
+      } else {
+        menu.classList.add('opacity-0', 'pointer-events-none', 'scale-y-95');
+        menu.classList.remove('opacity-100', 'pointer-events-auto', 'scale-y-100');
+        if (arrow) arrow.classList.remove('rotate-180');
+        
+        options.forEach(opt => {
+          opt.classList.add('opacity-0', 'translate-y-2');
+          opt.classList.remove('opacity-100', 'translate-y-0');
+        });
+      }
+    };
+
+    selected.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleDropdown();
+    });
+
+    options.forEach(option => {
+      option.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const optionText = option.querySelector('p.font-display').textContent;
+        selectedText.textContent = optionText;
+        const optionIconHTML = option.querySelector('svg').outerHTML;
+        selectedIcon.innerHTML = optionIconHTML;
+        toggleDropdown();
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (isOpen && !dropdown.contains(e.target)) {
+        toggleDropdown();
+      }
+    });
   });
 }

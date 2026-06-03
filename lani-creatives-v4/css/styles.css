@@ -3,8 +3,8 @@
 /* Base & Utilities */
 :root {
     --color-gold: #d4af37;
+    --color-cream: #F5F1E7;
     --color-onyx: #0a0a0c;
-    --color-ivory: #f9f6f0;
 }
 
 html {
@@ -18,10 +18,10 @@ body {
 
 /* Glassmorphism */
 .glass-panel {
-    background: rgba(22, 22, 25, 0.4);
+    background: rgba(245, 241, 231, 0.6);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 /* Text Shadow for blend modes */
@@ -59,7 +59,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-onyx);
+    background: var(--color-cream);
 }
 
 ::-webkit-scrollbar-thumb {

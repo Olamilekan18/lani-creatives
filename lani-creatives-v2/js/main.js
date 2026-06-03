@@ -234,4 +234,69 @@ document.addEventListener("DOMContentLoaded", () => {
         opacity: 0,
         duration: 1
     });
+
+    // Custom Dropdown Logic (Rich Version)
+    const dropdowns = document.querySelectorAll('.custom-dropdown');
+    dropdowns.forEach(dropdown => {
+        const selected = dropdown.querySelector('.dropdown-selected');
+        const selectedText = selected.querySelector('.selected-text');
+        const selectedIcon = selected.querySelector('.selected-icon');
+        const arrow = dropdown.querySelector('.dropdown-arrow');
+        const menu = dropdown.querySelector('.dropdown-menu');
+        const options = dropdown.querySelectorAll('.dropdown-option');
+
+        let isOpen = false;
+
+        const toggleDropdown = () => {
+            isOpen = !isOpen;
+            if (isOpen) {
+                menu.classList.remove('opacity-0', 'pointer-events-none', 'scale-y-95');
+                menu.classList.add('opacity-100', 'pointer-events-auto', 'scale-y-100');
+                if (arrow) arrow.classList.add('rotate-180');
+                
+                // Stagger in options
+                gsap.to(options, {
+                    y: 0, 
+                    opacity: 1, 
+                    duration: 0.4, 
+                    stagger: 0.05, 
+                    ease: "power2.out", 
+                    delay: 0.1
+                });
+            } else {
+                menu.classList.add('opacity-0', 'pointer-events-none', 'scale-y-95');
+                menu.classList.remove('opacity-100', 'pointer-events-auto', 'scale-y-100');
+                if (arrow) arrow.classList.remove('rotate-180');
+                
+                // Reset options immediately
+                gsap.set(options, { y: 10, opacity: 0 });
+            }
+        };
+
+        selected.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleDropdown();
+        });
+
+        options.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.stopPropagation();
+                // Update text
+                const optionText = option.querySelector('p.font-display').textContent;
+                selectedText.textContent = optionText;
+                
+                // Update icon HTML
+                const optionIconHTML = option.querySelector('svg').outerHTML;
+                selectedIcon.innerHTML = optionIconHTML;
+                
+                toggleDropdown();
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (isOpen && !dropdown.contains(e.target)) {
+                toggleDropdown();
+            }
+        });
+    });
 });
