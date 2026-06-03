@@ -1,0 +1,95 @@
+/* LANI Creatives v2 Custom Styles */
+
+/* Base & Utilities */
+:root {
+    --color-gold: #d4af37;
+    --color-onyx: #0a0a0c;
+    --color-ivory: #f9f6f0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism */
+.glass-panel {
+    background: rgba(22, 22, 25, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* Text Shadow for blend modes */
+.text-shadow {
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+.animate-blob {
+    animation: blob 15s infinite;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-onyx);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(212, 175, 55, 0.6);
+}
+
+/* Magnetic Button Container */
+.magnetic-btn {
+    display: inline-flex;
+    position: relative;
+}
+
+/* Section Header Lines */
+.section-header p {
+    position: relative;
+}
+
+/* Specific component styles */
+.acb-bg {
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
