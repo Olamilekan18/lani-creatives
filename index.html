@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
     <script>
         tailwind.config = { theme: { extend: { colors: { onyx: '#0A0A0A', 'onyx-light': '#141414', 'onyx-mid': '#1a1a1a', gold: '#C9A96E', 'gold-light': '#D4BA85', 'gold-dark': '#A88B4A', ivory: '#FAF7F2', 'ivory-dim': '#E8E4DD', terracotta: '#C44D2B', forest: '#1A3A2A' }, fontFamily: { display: ['Playfair Display', 'serif'], body: ['Inter', 'sans-serif'], accent: ['Cormorant Garamond', 'serif'] } } } }
     </script>
@@ -20,32 +21,43 @@
 <body class="bg-onyx text-ivory font-body">
 
     <!-- NAVBAR -->
-    <nav id="navbar"
-        class="navbar nav-animated fixed top-0 left-0 w-full z-50 py-6 px-6 md:px-12 flex items-center justify-between bg-transparent">
-        <a href="#hero" class="text-2xl font-display font-bold tracking-wider text-gold">LANI</a>
+    <nav id="navbar" class="navbar nav-animated fixed top-0 left-0 w-full z-50 py-6 px-6 md:px-12 flex items-center justify-between bg-transparent">
+        <a href="index.html" class="block w-24 md:w-32"><img src="lani-logo-nobg.png" alt="LANI Creatives" class="w-full h-auto object-contain"></a>
         <div class="hidden md:flex items-center gap-8 text-sm tracking-widest uppercase">
-            <a href="#about" class="nav-link text-ivory/70 hover:text-gold">About</a>
-            <a href="#services" class="nav-link text-ivory/70 hover:text-gold">Services</a>
-            <a href="#acb50" class="nav-link text-ivory/70 hover:text-gold">ACB@50</a>
-            <a href="#portfolio" class="nav-link text-ivory/70 hover:text-gold">Portfolio</a>
-            <a href="#impact" class="nav-link text-ivory/70 hover:text-gold">Impact</a>
-            <a href="#journal" class="nav-link text-ivory/70 hover:text-gold">Journal</a>
-            <a href="#contact" class="nav-link text-ivory/70 hover:text-gold">Contact</a>
+            <a href="about.html" class="nav-link text-ivory/70 hover:text-gold">About</a>
+            <div class="nav-dropdown relative group">
+                <button class="nav-link text-ivory/70 hover:text-gold flex items-center gap-1">Our Work <svg class="w-3 h-3 mt-0.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+                <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-56 bg-onyx-light/95 backdrop-blur-xl border border-gold/10 rounded-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <a href="our-work.html" class="block px-4 py-3 rounded-lg text-ivory/70 hover:text-gold hover:bg-onyx/50 transition-colors text-xs tracking-widest">Our Work</a>
+                    <a href="portfolio.html" class="block px-4 py-3 rounded-lg text-ivory/70 hover:text-gold hover:bg-onyx/50 transition-colors text-xs tracking-widest">Portfolio</a>
+                </div>
+            </div>
+            <a href="acb50.html" class="nav-link text-ivory/70 hover:text-gold">ACB@50</a>
+            <a href="impact.html" class="nav-link text-ivory/70 hover:text-gold">Impact</a>
+            <div class="nav-dropdown relative group">
+                <button class="nav-link text-ivory/70 hover:text-gold flex items-center gap-1">Insights <svg class="w-3 h-3 mt-0.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+                <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-56 bg-onyx-light/95 backdrop-blur-xl border border-gold/10 rounded-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <a href="journal.html" class="block px-4 py-3 rounded-lg text-ivory/70 hover:text-gold hover:bg-onyx/50 transition-colors text-xs tracking-widest">Journal</a>
+                    <a href="publications.html" class="block px-4 py-3 rounded-lg text-ivory/70 hover:text-gold hover:bg-onyx/50 transition-colors text-xs tracking-widest">Publications</a>
+                </div>
+            </div>
+            <a href="work-with-us.html" class="nav-link text-ivory/70 hover:text-gold">Work With Us</a>
+            <a href="contact.html" class="btn-gold magnetic px-5 py-2.5 rounded-full text-xs tracking-widest"><span>Contact</span></a>
         </div>
-        <button id="menu-toggle"
-            class="hamburger md:hidden flex flex-col gap-1.5 z-50"><span></span><span></span><span></span></button>
+        <button id="menu-toggle" class="hamburger md:hidden flex flex-col gap-1.5 z-50"><span></span><span></span><span></span></button>
     </nav>
 
     <!-- MOBILE MENU -->
-    <div id="mobile-menu"
-        class="mobile-menu fixed inset-0 z-40 bg-onyx/98 flex flex-col items-center justify-center gap-8 text-lg tracking-widest uppercase md:hidden">
-        <a href="#about" class="text-ivory/70 hover:text-gold transition-colors">About</a>
-        <a href="#services" class="text-ivory/70 hover:text-gold transition-colors">Services</a>
-        <a href="#acb50" class="text-ivory/70 hover:text-gold transition-colors">ACB@50</a>
-        <a href="#portfolio" class="text-ivory/70 hover:text-gold transition-colors">Portfolio</a>
-        <a href="#impact" class="text-ivory/70 hover:text-gold transition-colors">Impact</a>
-        <a href="#journal" class="text-ivory/70 hover:text-gold transition-colors">Journal</a>
-        <a href="#contact" class="text-ivory/70 hover:text-gold transition-colors">Contact</a>
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 bg-onyx/98 flex flex-col items-center justify-center gap-6 text-lg tracking-widest uppercase md:hidden">
+        <a href="about.html" class="text-ivory/70 hover:text-gold transition-colors">About</a>
+        <a href="our-work.html" class="text-ivory/70 hover:text-gold transition-colors">Our Work</a>
+        <a href="acb50.html" class="text-ivory/70 hover:text-gold transition-colors">ACB@50</a>
+        <a href="portfolio.html" class="text-ivory/70 hover:text-gold transition-colors">Portfolio</a>
+        <a href="impact.html" class="text-ivory/70 hover:text-gold transition-colors">Impact</a>
+        <a href="journal.html" class="text-ivory/70 hover:text-gold transition-colors">Journal</a>
+        <a href="publications.html" class="text-ivory/70 hover:text-gold transition-colors">Publications</a>
+        <a href="work-with-us.html" class="text-ivory/70 hover:text-gold transition-colors">Work With Us</a>
+        <a href="contact.html" class="text-ivory/70 hover:text-gold transition-colors">Contact</a>
     </div>
 
     <!-- HERO -->
@@ -181,9 +193,8 @@
                             screenings, panel discussions, and immersive installations — ACB@50 is both a retrospective
                             and a forward-looking manifesto.</p>
                     </div>
-                    <div class="reveal stagger-3"><a href="#contact"
-                            class="btn-gold magnetic inline-block px-8 py-4 rounded-full text-sm tracking-widest uppercase mt-4"><span>Learn
-                                More About ACB@50</span></a></div>
+                    <div class="reveal stagger-3"><a href="acb50.html"
+                            class="btn-gold magnetic inline-block px-8 py-4 rounded-full text-sm tracking-widest uppercase mt-4"><span>Explore the ACB@50 Microsite</span></a></div>
                 </div>
                 <div class="grid grid-cols-2 gap-4 reveal-scale">
                     <div class="placeholder-img aspect-square rounded-xl text-center p-4 text-xs">ACB@50<br>Image 1
@@ -538,561 +549,7 @@
     <!-- FOOTER -->
     <footer class="border-t border-gold/10 py-12 px-6 md:px-12 lg:px-24">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-            <a href="#hero" class="text-2xl font-display font-bold tracking-wider text-gold">LANI</a>
-            <p class="text-ivory/30 text-sm">&copy; 2025 LANI Creatives. All rights reserved.</p>
-            <div class="flex gap-6 text-sm">
-                <a href="#" class="footer-link text-ivory/40">Privacy</a>
-                <a href="#" class="footer-link text-ivory/40">Terms</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/animations.js"></script>
-    <script src="js/main.js"></script>
-</body>
-
-</html>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LANI Creatives — Premium African Creative Platform</title>
-    <meta name="description" content="LANI Creatives is a premium African creative, cultural and experience platform.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <script>
-        tailwind.config = { theme: { extend: { colors: { onyx: '#0A0A0A', 'onyx-light': '#141414', 'onyx-mid': '#1a1a1a', gold: '#C9A96E', 'gold-light': '#D4BA85', 'gold-dark': '#A88B4A', ivory: '#FAF7F2', 'ivory-dim': '#E8E4DD', terracotta: '#C44D2B', forest: '#1A3A2A' }, fontFamily: { display: ['Playfair Display', 'serif'], body: ['Inter', 'sans-serif'], accent: ['Cormorant Garamond', 'serif'] } } } }
-    </script>
-</head>
-
-<body class="bg-onyx text-ivory font-body">
-
-    <!-- NAVBAR -->
-    <nav id="navbar"
-        class="navbar nav-animated fixed top-0 left-0 w-full z-50 py-6 px-6 md:px-12 flex items-center justify-between bg-transparent">
-        <a href="#hero" class="text-2xl font-display font-bold tracking-wider text-gold">LANI</a>
-        <div class="hidden md:flex items-center gap-8 text-sm tracking-widest uppercase">
-            <a href="#about" class="nav-link text-ivory/70 hover:text-gold">About</a>
-            <a href="#services" class="nav-link text-ivory/70 hover:text-gold">Services</a>
-            <a href="#acb50" class="nav-link text-ivory/70 hover:text-gold">ACB@50</a>
-            <a href="#portfolio" class="nav-link text-ivory/70 hover:text-gold">Portfolio</a>
-            <a href="#impact" class="nav-link text-ivory/70 hover:text-gold">Impact</a>
-            <a href="#journal" class="nav-link text-ivory/70 hover:text-gold">Journal</a>
-            <a href="#contact" class="nav-link text-ivory/70 hover:text-gold">Contact</a>
-        </div>
-        <button id="menu-toggle"
-            class="hamburger md:hidden flex flex-col gap-1.5 z-50"><span></span><span></span><span></span></button>
-    </nav>
-
-    <!-- MOBILE MENU -->
-    <div id="mobile-menu"
-        class="mobile-menu fixed inset-0 z-40 bg-onyx/98 flex flex-col items-center justify-center gap-8 text-lg tracking-widest uppercase md:hidden">
-        <a href="#about" class="text-ivory/70 hover:text-gold transition-colors">About</a>
-        <a href="#services" class="text-ivory/70 hover:text-gold transition-colors">Services</a>
-        <a href="#acb50" class="text-ivory/70 hover:text-gold transition-colors">ACB@50</a>
-        <a href="#portfolio" class="text-ivory/70 hover:text-gold transition-colors">Portfolio</a>
-        <a href="#impact" class="text-ivory/70 hover:text-gold transition-colors">Impact</a>
-        <a href="#journal" class="text-ivory/70 hover:text-gold transition-colors">Journal</a>
-        <a href="#contact" class="text-ivory/70 hover:text-gold transition-colors">Contact</a>
-    </div>
-
-    <!-- HERO -->
-    <section id="hero" class="hero-section relative flex items-center justify-center">
-        <div class="absolute inset-0 hero-placeholder hero-bg-zoom"></div>
-        <canvas id="particle-canvas"></canvas>
-        <div class="absolute inset-0 hero-overlay"></div>
-        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
-            <p class="font-accent text-gold text-lg md:text-xl tracking-[0.3em] uppercase mb-6 reveal stagger-1">
-                Storytelling · Culture · Experience</p>
-            <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-8 reveal stagger-1">
-                Crafting Africa's <br class="hidden md:block" />Creative Future</h1>
-            <p class="text-ivory/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 reveal stagger-2">A premium African
-                creative, cultural and experience platform — where heritage meets innovation.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center reveal stagger-3">
-                <a href="#services"
-                    class="btn-gold magnetic px-8 py-4 rounded-full text-sm tracking-widest uppercase"><span>Explore Our
-                        Work</span></a>
-                <a href="#contact"
-                    class="btn-outline-gold magnetic px-8 py-4 rounded-full text-sm tracking-widest uppercase">Get In
-                    Touch</a>
-            </div>
-        </div>
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-indicator text-gold/50">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                    d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="py-24 md:py-32 px-6 md:px-12 lg:px-24">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <p class="text-gold text-sm tracking-[0.3em] uppercase mb-4 reveal">Who We Are</p>
-                <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 reveal stagger-1">Reimagining African
-                    Creative Excellence</h2>
-                <span class="section-divider block mb-8 line-animated"></span>
-                <p class="text-ivory/60 text-lg leading-relaxed mb-6 reveal stagger-2">LANI Creatives is a premium
-                    African creative, cultural and experience platform operating at the intersection of storytelling,
-                    culture, media, events, heritage preservation, creative enterprise, and innovation.</p>
-                <p class="text-ivory/60 leading-relaxed mb-8 reveal stagger-3">Our mission is to redefine African
-                    narratives through world-class creative delivery, building bridges between tradition and modernity.
-                </p>
-                <div class="grid grid-cols-2 gap-6 reveal stagger-4">
-                    <div class="border-l-2 border-gold/30 pl-4">
-                        <p class="text-gold font-display text-2xl font-bold">2024</p>
-                        <p class="text-ivory/50 text-sm">Founded</p>
-                    </div>
-                    <div class="border-l-2 border-gold/30 pl-4">
-                        <p class="text-gold font-display text-2xl font-bold">Lagos</p>
-                        <p class="text-ivory/50 text-sm">Headquarters</p>
-                    </div>
-                </div>
-            </div>
-            <div class="img-reveal rounded-xl overflow-hidden aspect-[4/5]">
-                <div class="placeholder-img w-full h-full rounded-xl text-center p-8">YOUR IMAGE HERE<br><span
-                        class="text-xs opacity-50 mt-2 block">About / Team Photo</span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-onyx-light">
-        <div class="max-w-7xl mx-auto text-center mb-16">
-            <p class="text-gold text-sm tracking-[0.3em] uppercase mb-4 reveal">What We Do</p>
-            <h2 class="font-display text-4xl md:text-5xl font-bold reveal stagger-1">Creative Services</h2>
-            <span class="section-divider mx-auto mt-6 line-animated"></span>
-        </div>
-        <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="service-card rounded-2xl p-8 reveal stagger-1">
-                <div class="service-icon text-gold/80 text-4xl mb-5">✦</div>
-                <h3 class="font-display text-xl font-bold mb-3">Creative Strategy</h3>
-                <p class="text-ivory/50 text-sm leading-relaxed">Brand positioning, creative direction, and cultural
-                    consulting that positions African brands on the global stage.</p>
-            </div>
-            <div class="service-card rounded-2xl p-8 reveal stagger-2">
-                <div class="service-icon text-gold/80 text-4xl mb-5">◈</div>
-                <h3 class="font-display text-xl font-bold mb-3">Storytelling & Content</h3>
-                <p class="text-ivory/50 text-sm leading-relaxed">Compelling narratives across film, documentary,
-                    editorial, and digital media that amplify African voices.</p>
-            </div>
-            <div class="service-card rounded-2xl p-8 reveal stagger-3">
-                <div class="service-icon text-gold/80 text-4xl mb-5">◆</div>
-                <h3 class="font-display text-xl font-bold mb-3">Events & Experiences</h3>
-                <p class="text-ivory/50 text-sm leading-relaxed">Immersive cultural experiences, exhibitions, and
-                    premium events that leave lasting impressions.</p>
-            </div>
-            <div class="service-card rounded-2xl p-8 reveal stagger-4">
-                <div class="service-icon text-gold/80 text-4xl mb-5">⬖</div>
-                <h3 class="font-display text-xl font-bold mb-3">Heritage & Culture</h3>
-                <p class="text-ivory/50 text-sm leading-relaxed">Preservation and celebration of African cultural
-                    heritage through modern creative expressions.</p>
-            </div>
-            <div class="service-card rounded-2xl p-8 reveal stagger-5">
-                <div class="service-icon text-gold/80 text-4xl mb-5">▲</div>
-                <h3 class="font-display text-xl font-bold mb-3">Media Production</h3>
-                <p class="text-ivory/50 text-sm leading-relaxed">End-to-end media production — from concept to delivery
-                    — with cinema-grade quality standards.</p>
-            </div>
-            <div class="service-card rounded-2xl p-8 reveal stagger-6">
-                <div class="service-icon text-gold/80 text-4xl mb-5">◎</div>
-                <h3 class="font-display text-xl font-bold mb-3">Talent Development</h3>
-                <p class="text-ivory/50 text-sm leading-relaxed">Mentorship programmes and creative enterprise
-                    development nurturing the next generation of African creatives.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ACB@50 -->
-    <section id="acb50" class="py-24 md:py-32 px-6 md:px-12 lg:px-24 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-forest/20 via-onyx to-onyx-light"></div>
-        <div class="relative z-10 max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <p class="text-gold text-sm tracking-[0.3em] uppercase mb-4 reveal">Flagship Project</p>
-                <h2 class="acb-badge font-display text-5xl md:text-7xl font-bold reveal stagger-1">ACB@50</h2>
-                <p class="text-ivory/50 text-lg mt-4 max-w-2xl mx-auto reveal stagger-2">A landmark celebration of 50
-                    years of African cultural brilliance — our inaugural and signature project.</p>
-                <span class="section-divider mx-auto mt-8 line-animated"></span>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
-                <div class="space-y-6">
-                    <div class="reveal stagger-1">
-                        <h3 class="font-display text-2xl font-bold text-gold mb-2">The Vision</h3>
-                        <p class="text-ivory/60 leading-relaxed">ACB@50 is a multi-dimensional creative and cultural
-                            programme celebrating five decades of African creative achievement across art, music, film,
-                            fashion, literature, and innovation.</p>
-                    </div>
-                    <div class="reveal stagger-2">
-                        <h3 class="font-display text-2xl font-bold text-gold mb-2">The Experience</h3>
-                        <p class="text-ivory/60 leading-relaxed">Spanning exhibitions, live performances, film
-                            screenings, panel discussions, and immersive installations — ACB@50 is both a retrospective
-                            and a forward-looking manifesto.</p>
-                    </div>
-                    <div class="reveal stagger-3"><a href="#contact"
-                            class="btn-gold magnetic inline-block px-8 py-4 rounded-full text-sm tracking-widest uppercase mt-4"><span>Learn
-                                More About ACB@50</span></a></div>
-                </div>
-                <div class="grid grid-cols-2 gap-4 reveal-scale">
-                    <div class="placeholder-img aspect-square rounded-xl text-center p-4 text-xs">ACB@50<br>Image 1
-                    </div>
-                    <div class="placeholder-img aspect-[3/4] rounded-xl text-center p-4 text-xs mt-8">ACB@50<br>Image 2
-                    </div>
-                    <div class="placeholder-img aspect-[3/4] rounded-xl text-center p-4 text-xs -mt-8">ACB@50<br>Image 3
-                    </div>
-                    <div class="placeholder-img aspect-square rounded-xl text-center p-4 text-xs">ACB@50<br>Image 4
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="reveal stagger-1 p-6 rounded-xl border border-gold/10 bg-onyx/50">
-                    <p class="impact-number" data-count="50" data-suffix="+">0</p>
-                    <p class="text-ivory/50 text-sm mt-2">Years Celebrated</p>
-                </div>
-                <div class="reveal stagger-2 p-6 rounded-xl border border-gold/10 bg-onyx/50">
-                    <p class="impact-number" data-count="200" data-suffix="+">0</p>
-                    <p class="text-ivory/50 text-sm mt-2">Artists Featured</p>
-                </div>
-                <div class="reveal stagger-3 p-6 rounded-xl border border-gold/10 bg-onyx/50">
-                    <p class="impact-number" data-count="15" data-suffix="">0</p>
-                    <p class="text-ivory/50 text-sm mt-2">Countries</p>
-                </div>
-                <div class="reveal stagger-4 p-6 rounded-xl border border-gold/10 bg-onyx/50">
-                    <p class="impact-number" data-count="30" data-suffix="K+">0</p>
-                    <p class="text-ivory/50 text-sm mt-2">Audience Reached</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-onyx-light">
-        <div class="max-w-7xl mx-auto text-center mb-16">
-            <p class="text-gold text-sm tracking-[0.3em] uppercase mb-4 reveal">Our Work</p>
-            <h2 class="font-display text-4xl md:text-5xl font-bold reveal stagger-1">Selected Portfolio</h2>
-            <span class="section-divider mx-auto mt-6 line-animated"></span>
-        </div>
-        <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="portfolio-item rounded-xl overflow-hidden aspect-[4/5] reveal stagger-1">
-                <div class="placeholder-img w-full h-full p-6">Portfolio 1<br><span class="text-xs opacity-50">Event
-                        Photography</span></div>
-                <div class="portfolio-overlay absolute inset-0 flex items-end p-6">
-                    <div>
-                        <p class="font-display text-lg font-bold">Cultural Exhibition</p>
-                        <p class="text-ivory/50 text-sm">Events & Experiences</p>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item rounded-xl overflow-hidden aspect-[4/5] reveal stagger-2">
-                <div class="placeholder-img w-full h-full p-6">Portfolio 2<br><span class="text-xs opacity-50">Brand
-                        Campaign</span></div>
-                <div class="portfolio-overlay absolute inset-0 flex items-end p-6">
-                    <div>
-                        <p class="font-display text-lg font-bold">Brand Identity</p>
-                        <p class="text-ivory/50 text-sm">Creative Strategy</p>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item rounded-xl overflow-hidden aspect-[4/5] reveal stagger-3">
-                <div class="placeholder-img w-full h-full p-6">Portfolio 3<br><span
-                        class="text-xs opacity-50">Documentary Still</span></div>
-                <div class="portfolio-overlay absolute inset-0 flex items-end p-6">
-                    <div>
-                        <p class="font-display text-lg font-bold">Documentary Film</p>
-                        <p class="text-ivory/50 text-sm">Storytelling</p>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item rounded-xl overflow-hidden aspect-square lg:aspect-[4/5] reveal stagger-4">
-                <div class="placeholder-img w-full h-full p-6">Portfolio 4<br><span class="text-xs opacity-50">Fashion
-                        Show</span></div>
-                <div class="portfolio-overlay absolute inset-0 flex items-end p-6">
-                    <div>
-                        <p class="font-display text-lg font-bold">Fashion Showcase</p>
-                        <p class="text-ivory/50 text-sm">Culture & Heritage</p>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item rounded-xl overflow-hidden aspect-square lg:aspect-[4/5] reveal stagger-5">
-                <div class="placeholder-img w-full h-full p-6">Portfolio 5<br><span class="text-xs opacity-50">Art
-                        Installation</span></div>
-                <div class="portfolio-overlay absolute inset-0 flex items-end p-6">
-                    <div>
-                        <p class="font-display text-lg font-bold">Art Installation</p>
-                        <p class="text-ivory/50 text-sm">Immersive Experience</p>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item rounded-xl overflow-hidden aspect-square lg:aspect-[4/5] reveal stagger-6">
-                <div class="placeholder-img w-full h-full p-6">Portfolio 6<br><span class="text-xs opacity-50">Music
-                        Video</span></div>
-                <div class="portfolio-overlay absolute inset-0 flex items-end p-6">
-                    <div>
-                        <p class="font-display text-lg font-bold">Music Visual</p>
-                        <p class="text-ivory/50 text-sm">Media Production</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- IMPACT -->
-    <section id="impact" class="py-24 md:py-32 px-6 md:px-12 lg:px-24">
-        <div class="max-w-7xl mx-auto text-center mb-16">
-            <p class="text-gold text-sm tracking-[0.3em] uppercase mb-4 reveal">Our Reach</p>
-            <h2 class="font-display text-4xl md:text-5xl font-bold reveal stagger-1">Impact & Programmes</h2>
-            <span class="section-divider mx-auto mt-6 line-animated"></span>
-        </div>
-        <div class="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center mb-16">
-            <div class="reveal stagger-1">
-                <p class="impact-number" data-count="50" data-suffix="+">0</p>
-                <p class="text-ivory/50 mt-2">Creatives Trained</p>
-            </div>
-            <div class="reveal stagger-2">
-                <p class="impact-number" data-count="12" data-suffix="">0</p>
-                <p class="text-ivory/50 mt-2">Active Programmes</p>
-            </div>
-            <div class="reveal stagger-3">
-                <p class="impact-number" data-count="8" data-suffix="">0</p>
-                <p class="text-ivory/50 mt-2">Partner Institutions</p>
-            </div>
-            <div class="reveal stagger-4">
-                <p class="impact-number" data-count="100" data-suffix="K+">0</p>
-                <p class="text-ivory/50 mt-2">Global Reach</p>
-            </div>
-        </div>
-        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-            <div class="service-card rounded-2xl p-8 reveal stagger-1">
-                <h3 class="font-display text-xl font-bold text-gold mb-3">Creative Enterprise</h3>
-                <p class="text-ivory/50 text-sm leading-relaxed">Supporting emerging African creatives with business
-                    skills, mentorship, and market access to build sustainable creative careers.</p>
-            </div>
-            <div class="service-card rounded-2xl p-8 reveal stagger-2">
-                <h3 class="font-display text-xl font-bold text-gold mb-3">Heritage Preservation</h3>
-                <p class="text-ivory/50 text-sm leading-relaxed">Documenting, preserving, and reimagining African
-                    cultural heritage through digital archives and contemporary art.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- JOURNAL -->
-    <section id="journal" class="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-onyx-light">
-        <div class="max-w-7xl mx-auto text-center mb-16">
-            <p class="text-gold text-sm tracking-[0.3em] uppercase mb-4 reveal">Insights</p>
-            <h2 class="font-display text-4xl md:text-5xl font-bold reveal stagger-1">Journal & Publications</h2>
-            <span class="section-divider mx-auto mt-6 line-animated"></span>
-        </div>
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-            <article class="journal-card rounded-2xl overflow-hidden reveal stagger-1">
-                <div class="placeholder-img aspect-video">Article Image 1</div>
-                <div class="p-6">
-                    <p class="text-gold/60 text-xs tracking-widest uppercase mb-2">Culture · May 2025</p>
-                    <h3 class="font-display text-lg font-bold mb-2 hover:text-gold transition-colors cursor-pointer">The
-                        Renaissance of African Storytelling in Global Media</h3>
-                    <p class="text-ivory/40 text-sm leading-relaxed">Exploring how African creators are reshaping global
-                        narratives through film, music, and digital art.</p>
-                </div>
-            </article>
-            <article class="journal-card rounded-2xl overflow-hidden reveal stagger-2">
-                <div class="placeholder-img aspect-video">Article Image 2</div>
-                <div class="p-6">
-                    <p class="text-gold/60 text-xs tracking-widest uppercase mb-2">Events · April 2025</p>
-                    <h3 class="font-display text-lg font-bold mb-2 hover:text-gold transition-colors cursor-pointer">
-                        Designing Immersive Cultural Experiences</h3>
-                    <p class="text-ivory/40 text-sm leading-relaxed">Behind the scenes of creating memorable,
-                        multi-sensory events that celebrate African heritage.</p>
-                </div>
-            </article>
-            <article class="journal-card rounded-2xl overflow-hidden reveal stagger-3">
-                <div class="placeholder-img aspect-video">Article Image 3</div>
-                <div class="p-6">
-                    <p class="text-gold/60 text-xs tracking-widest uppercase mb-2">Innovation · March 2025</p>
-                    <h3 class="font-display text-lg font-bold mb-2 hover:text-gold transition-colors cursor-pointer">
-                        Creative Enterprise: Building Sustainable Futures</h3>
-                    <p class="text-ivory/40 text-sm leading-relaxed">How creative enterprise development is empowering
-                        the next generation of African talent.</p>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-24 md:py-32 px-6 md:px-12 lg:px-24">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
-            <div>
-                <p class="text-gold text-sm tracking-[0.3em] uppercase mb-4 reveal">Work With Us</p>
-                <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 reveal stagger-1">Let's Create Together</h2>
-                <span class="section-divider block mb-8 line-animated"></span>
-                <p class="text-ivory/60 leading-relaxed mb-8 reveal stagger-2">Whether you're seeking creative strategy,
-                    event production, cultural consultancy, or partnership opportunities — we'd love to hear from you.
-                </p>
-                <div class="space-y-4 reveal stagger-3">
-                    <p class="flex items-center gap-3 text-ivory/50"><span class="text-gold">✉</span>
-                        hello@lanicreatives.com</p>
-                    <p class="flex items-center gap-3 text-ivory/50"><span class="text-gold">☏</span> +234 800 LANI</p>
-                    <p class="flex items-center gap-3 text-ivory/50"><span class="text-gold">◉</span> Lagos, Nigeria</p>
-                </div>
-                <div class="flex gap-4 mt-8 reveal stagger-4">
-                    <a href="#" aria-label="LinkedIn"
-                        class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold/60 hover:bg-gold hover:text-onyx transition-all"><svg
-                            class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                        </svg></a>
-                    <a href="#" aria-label="Instagram"
-                        class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold/60 hover:bg-gold hover:text-onyx transition-all"><svg
-                            class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                        </svg></a>
-                    <a href="#" aria-label="X"
-                        class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold/60 hover:bg-gold hover:text-onyx transition-all"><svg
-                            class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                        </svg></a>
-                    <a href="#" aria-label="YouTube"
-                        class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold/60 hover:bg-gold hover:text-onyx transition-all"><svg
-                            class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                        </svg></a>
-                </div>
-            </div>
-            <form id="contact-form" class="space-y-6 reveal stagger-2">
-                <div class="grid sm:grid-cols-2 gap-6">
-                    <input type="text" placeholder="First Name" required
-                        class="form-input w-full px-5 py-4 rounded-xl text-sm">
-                    <input type="text" placeholder="Last Name" required
-                        class="form-input w-full px-5 py-4 rounded-xl text-sm">
-                </div>
-                <input type="email" placeholder="Email Address" required
-                    class="form-input w-full px-5 py-4 rounded-xl text-sm">
-                <div class="group relative custom-dropdown w-full text-left" tabindex="0">
-                    <label class="block text-gold text-xs uppercase tracking-widest mb-3">Enquiry Type</label>
-
-                    <!-- Selected State -->
-                    <div
-                        class="w-full bg-onyx-light border border-ivory/20 rounded-xl p-4 flex justify-between items-center cursor-pointer dropdown-selected transition-all duration-300 hover:border-gold hover:shadow-[0_0_20px_rgba(201,169,110,0.1)]">
-                        <div class="flex items-center gap-4">
-                            <div
-                                class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center selected-icon transition-colors">
-                                <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                        d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                                </svg>
-                            </div>
-                            <span class="font-display text-xl text-ivory selected-text">Signature Events</span>
-                        </div>
-                        <div
-                            class="w-8 h-8 rounded-full border border-ivory/20 flex items-center justify-center transition-colors group-hover:border-gold/50">
-                            <svg class="w-4 h-4 text-gold transition-transform duration-500 dropdown-arrow" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </div>
-                    </div>
-
-                    <!-- Dropdown Menu -->
-                    <div
-                        class="absolute top-[calc(100%+0.5rem)] left-0 w-full bg-onyx-light border border-gold/30 rounded-xl shadow-2xl z-[70] opacity-0 pointer-events-none dropdown-menu transition-all duration-400 origin-top scale-y-95">
-                        <div class="p-2 flex flex-col gap-1">
-
-                            <div class="dropdown-option p-3 rounded-lg hover:bg-onyx cursor-pointer transition-colors flex items-center gap-4 group/opt opacity-0 translate-y-2"
-                                data-value="Signature Events">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0 group-hover/opt:bg-gold/30 group-hover/opt:scale-110 transition-all duration-300">
-                                    <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p
-                                        class="font-display text-lg text-ivory group-hover/opt:text-gold transition-colors font-semibold">
-                                        Signature Events</p>
-                                    <p class="text-xs text-ivory/60 font-medium">Milestones, galas & corporate
-                                        celebrations</p>
-                                </div>
-                            </div>
-
-                            <div class="dropdown-option p-3 rounded-lg hover:bg-onyx cursor-pointer transition-colors flex items-center gap-4 group/opt opacity-0 translate-y-2"
-                                data-value="Creative Consulting">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-ivory/5 flex items-center justify-center shrink-0 group-hover/opt:bg-gold/30 group-hover/opt:scale-110 transition-all duration-300">
-                                    <svg class="w-5 h-5 text-ivory/50 group-hover/opt:text-gold transition-colors"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p
-                                        class="font-display text-lg text-ivory group-hover/opt:text-gold transition-colors font-semibold">
-                                        Creative Consulting</p>
-                                    <p class="text-xs text-ivory/60 font-medium">Brand strategy & creative direction</p>
-                                </div>
-                            </div>
-
-                            <div class="dropdown-option p-3 rounded-lg hover:bg-onyx cursor-pointer transition-colors flex items-center gap-4 group/opt opacity-0 translate-y-2"
-                                data-value="Film & Storytelling">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-ivory/5 flex items-center justify-center shrink-0 group-hover/opt:bg-gold/30 group-hover/opt:scale-110 transition-all duration-300">
-                                    <svg class="w-5 h-5 text-ivory/50 group-hover/opt:text-gold transition-colors"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p
-                                        class="font-display text-lg text-ivory group-hover/opt:text-gold transition-colors font-semibold">
-                                        Film & Storytelling</p>
-                                    <p class="text-xs text-ivory/60 font-medium">Documentary, film & media projects</p>
-                                </div>
-                            </div>
-
-                            <div class="dropdown-option p-3 rounded-lg hover:bg-onyx cursor-pointer transition-colors flex items-center gap-4 group/opt opacity-0 translate-y-2"
-                                data-value="Other">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-ivory/5 flex items-center justify-center shrink-0 group-hover/opt:bg-gold/30 group-hover/opt:scale-110 transition-all duration-300">
-                                    <svg class="w-5 h-5 text-ivory/50 group-hover/opt:text-gold transition-colors"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p
-                                        class="font-display text-lg text-ivory group-hover/opt:text-gold transition-colors font-semibold">
-                                        Other</p>
-                                    <p class="text-xs text-ivory/60 font-medium">General enquiries & partnerships</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <textarea rows="4" placeholder="Your Message" required
-                    class="form-input w-full px-5 py-4 rounded-xl text-sm resize-none"></textarea>
-                <button type="submit"
-                    class="btn-gold magnetic w-full py-4 rounded-full text-sm tracking-widest uppercase"><span>Send
-                        Message</span></button>
-            </form>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="border-t border-gold/10 py-12 px-6 md:px-12 lg:px-24">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-            <a href="#hero" class="text-2xl font-display font-bold tracking-wider text-gold">LANI</a>
+            <a href="index.html" class="block w-24 md:w-32"><img src="lani-logo-nobg.png" alt="LANI Creatives" class="w-full h-auto object-contain"></a>
             <p class="text-ivory/30 text-sm">&copy; 2025 LANI Creatives. All rights reserved.</p>
             <div class="flex gap-6 text-sm">
                 <a href="#" class="footer-link text-ivory/40">Privacy</a>
