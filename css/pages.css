@@ -1,0 +1,165 @@
+/* LANI CREATIVES — Shared Page Styles */
+
+/* Page Hero (subpages) */
+.page-hero {
+  min-height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Nav Dropdown */
+.nav-dropdown-menu {
+  transform: translateY(8px);
+}
+.nav-dropdown:hover .nav-dropdown-menu {
+  transform: translateY(0);
+}
+
+/* Work Category Cards */
+.work-category {
+  border: 1px solid rgba(201,169,110,0.1);
+  background: linear-gradient(145deg, rgba(26,26,26,0.6), rgba(20,20,20,0.9));
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.work-category:hover {
+  border-color: rgba(201,169,110,0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+/* Portfolio Filter */
+.portfolio-filter-btn {
+  padding: 8px 20px;
+  border: 1px solid rgba(201,169,110,0.2);
+  border-radius: 9999px;
+  color: rgba(250,247,242,0.5);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+}
+.portfolio-filter-btn:hover,
+.portfolio-filter-btn.active {
+  background: var(--gold);
+  color: var(--onyx);
+  border-color: var(--gold);
+}
+
+/* Journal Article Card */
+.article-card {
+  background: var(--onyx-light);
+  border: 1px solid rgba(201,169,110,0.08);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.article-card:hover {
+  border-color: rgba(201,169,110,0.25);
+  transform: translateY(-6px);
+}
+
+/* Publication Card */
+.pub-card {
+  background: linear-gradient(145deg, rgba(26,26,26,0.8), rgba(20,20,20,0.95));
+  border: 1px solid rgba(201,169,110,0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pub-card:hover {
+  border-color: rgba(201,169,110,0.4);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+/* ACB Pillar Cards */
+.acb-pillar {
+  background: linear-gradient(145deg, rgba(26,58,42,0.3), rgba(20,20,20,0.9));
+  border: 1px solid rgba(201,169,110,0.15);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+.acb-pillar:hover {
+  border-color: rgba(201,169,110,0.5);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(201,169,110,0.08);
+}
+
+/* Timeline */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--gold), transparent);
+  transform: translateX(-50%);
+}
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid var(--onyx);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* Gallery Masonry */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(10,10,10,0.7) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.gallery-item:hover::after {
+  opacity: 1;
+}
+.gallery-item:hover .placeholder-img {
+  transform: scale(1.08);
+}
+
+/* Enquiry Category Cards */
+.enquiry-cat {
+  background: linear-gradient(145deg, rgba(26,26,26,0.8), rgba(20,20,20,0.95));
+  border: 1px solid rgba(201,169,110,0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.enquiry-cat:hover,
+.enquiry-cat.selected {
+  border-color: rgba(201,169,110,0.5);
+  background: linear-gradient(145deg, rgba(201,169,110,0.1), rgba(20,20,20,0.95));
+  transform: translateY(-4px);
+}
+
+/* Impact Programme Card */
+.programme-card {
+  background: linear-gradient(145deg, rgba(26,26,26,0.6), rgba(20,20,20,0.9));
+  border: 1px solid rgba(201,169,110,0.1);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.programme-card:hover {
+  border-color: rgba(201,169,110,0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}

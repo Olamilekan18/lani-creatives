@@ -1,0 +1,208 @@
+/* LANI CREATIVES V4 — Shared Page Styles (Light Theme) */
+
+/* Page Hero (subpages) */
+.page-hero {
+  min-height: 60vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-cream) 0%, #E8E2D4 100%);
+}
+
+/* Nav Dropdown */
+.nav-dropdown-menu {
+  transform: translateY(8px);
+}
+.nav-dropdown:hover .nav-dropdown-menu {
+  transform: translateY(0);
+}
+
+/* Work Cards */
+.work-category {
+  border: 1px solid rgba(212,175,55,0.1);
+  background: var(--color-cream);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.work-category:hover {
+  border-color: rgba(212,175,55,0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+/* Portfolio Filter */
+.portfolio-filter-btn {
+  padding: 8px 20px;
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 9999px;
+  color: rgba(10,10,12,0.5);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+}
+.portfolio-filter-btn:hover,
+.portfolio-filter-btn.active {
+  background: var(--color-gold);
+  color: var(--color-cream);
+  border-color: var(--color-gold);
+}
+
+/* Article Card (Light) */
+.article-card-light {
+  background: var(--color-cream);
+  border: 1px solid rgba(212,175,55,0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.article-card-light:hover {
+  border-color: rgba(212,175,55,0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+/* Publication Card (Light) */
+.pub-card-light {
+  background: var(--color-cream);
+  border: 1px solid rgba(212,175,55,0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pub-card-light:hover {
+  border-color: rgba(212,175,55,0.4);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+}
+
+/* ACB Pillar (Light) */
+.acb-pillar-light {
+  background: var(--color-cream);
+  border: 1px solid rgba(212,175,55,0.15);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+.acb-pillar-light:hover {
+  border-color: rgba(212,175,55,0.5);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(212,175,55,0.08);
+}
+
+/* Programme Card (Light) */
+.programme-card-light {
+  background: var(--color-cream);
+  border: 1px solid rgba(212,175,55,0.1);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.programme-card-light:hover {
+  border-color: rgba(212,175,55,0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+}
+
+/* Enquiry Category (Light) */
+.enquiry-cat-light {
+  background: var(--color-cream);
+  border: 1px solid rgba(212,175,55,0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.enquiry-cat-light:hover,
+.enquiry-cat-light.selected {
+  border-color: rgba(212,175,55,0.5);
+  background: linear-gradient(145deg, rgba(212,175,55,0.1), var(--color-cream));
+  transform: translateY(-4px);
+}
+
+/* Gallery Item (Light) */
+.gallery-item-light {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+.gallery-item-light::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(245,241,231,0.8) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.gallery-item-light:hover::after {
+  opacity: 1;
+}
+
+/* Placeholder images for light theme */
+.placeholder-img-light {
+  background: linear-gradient(135deg, #E8E2D4, #DDD8CC);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(10,10,12,0.15);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Portfolio item light */
+.portfolio-item-light {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.portfolio-item-light .portfolio-overlay-light {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background: linear-gradient(0deg, rgba(245,241,231,0.95) 0%, transparent 60%);
+}
+.portfolio-item-light:hover .portfolio-overlay-light {
+  opacity: 1;
+}
+
+/* Service card light */
+.service-card-light {
+  background: var(--color-cream);
+  border: 1px solid rgba(212,175,55,0.1);
+  border-radius: 1rem;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.service-card-light:hover {
+  border-color: rgba(212,175,55,0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+/* Form input light */
+.form-input-light {
+  background: var(--color-cream);
+  border: 1px solid rgba(10,10,12,0.15);
+  color: var(--color-onyx);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+}
+.form-input-light:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(212,175,55,0.1);
+}
+.form-input-light::placeholder {
+  color: rgba(10,10,12,0.35);
+}
+
+/* Section divider light */
+.section-divider-light {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}

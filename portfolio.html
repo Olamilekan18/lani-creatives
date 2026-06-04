@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — LANI Creatives</title>
+<meta name="description" content="LANI Creatives portfolio showcasing our work in experiences, film, culture, training, events, and storytelling.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/pages.css">
+<script>tailwind.config={theme:{extend:{colors:{onyx:'#0A0A0A','onyx-light':'#141414','onyx-mid':'#1a1a1a',gold:'#C9A96E','gold-light':'#D4BA85','gold-dark':'#A88B4A',ivory:'#FAF7F2','ivory-dim':'#E8E4DD',terracotta:'#C44D2B',forest:'#1A3A2A'},fontFamily:{display:['Playfair Display','serif'],body:['Inter','sans-serif'],accent:['Cormorant Garamond','serif']}}}}</script>
+</head>
+<body class="bg-onyx text-ivory font-body">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="navbar nav-animated fixed top-0 left-0 w-full z-50 py-6 px-6 md:px-12 flex items-center justify-between bg-transparent">
+<a href="index.html" class="block w-24 md:w-32"><img src="lani-logo-nobg.png" alt="LANI Creatives" class="w-full h-auto object-contain"></a>
+<div class="hidden md:flex items-center gap-8 text-sm tracking-widest uppercase">
+  <a href="about.html" class="nav-link text-ivory/70 hover:text-gold">About</a>
+  <div class="nav-dropdown relative group">
+    <button class="nav-link active text-gold flex items-center gap-1">Our Work <svg class="w-3 h-3 mt-0.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+    <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-56 bg-onyx-light/95 backdrop-blur-xl border border-gold/10 rounded-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+      <a href="our-work.html" class="block px-4 py-3 rounded-lg text-ivory/70 hover:text-gold hover:bg-onyx/50 transition-colors text-xs tracking-widest">Our Work</a>
+      <a href="portfolio.html" class="block px-4 py-3 rounded-lg text-gold hover:bg-onyx/50 transition-colors text-xs tracking-widest">Portfolio</a>
+    </div>
+  </div>
+  <a href="acb50.html" class="nav-link text-ivory/70 hover:text-gold">ACB@50</a>
+  <a href="impact.html" class="nav-link text-ivory/70 hover:text-gold">Impact</a>
+  <div class="nav-dropdown relative group">
+    <button class="nav-link text-ivory/70 hover:text-gold flex items-center gap-1">Insights <svg class="w-3 h-3 mt-0.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+    <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-56 bg-onyx-light/95 backdrop-blur-xl border border-gold/10 rounded-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+      <a href="journal.html" class="block px-4 py-3 rounded-lg text-ivory/70 hover:text-gold hover:bg-onyx/50 transition-colors text-xs tracking-widest">Journal</a>
+      <a href="publications.html" class="block px-4 py-3 rounded-lg text-ivory/70 hover:text-gold hover:bg-onyx/50 transition-colors text-xs tracking-widest">Publications</a>
+    </div>
+  </div>
+  <a href="work-with-us.html" class="nav-link text-ivory/70 hover:text-gold">Work With Us</a>
+  <a href="contact.html" class="btn-gold magnetic px-5 py-2.5 rounded-full text-xs tracking-widest"><span>Contact</span></a>
+</div>
+<button id="menu-toggle" class="hamburger md:hidden flex flex-col gap-1.5 z-50"><span></span><span></span><span></span></button>
+</nav>
+<div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 bg-onyx/98 flex flex-col items-center justify-center gap-6 text-lg tracking-widest uppercase md:hidden">
+<a href="about.html" class="text-ivory/70 hover:text-gold transition-colors">About</a>
+<a href="our-work.html" class="text-ivory/70 hover:text-gold transition-colors">Our Work</a>
+<a href="acb50.html" class="text-ivory/70 hover:text-gold transition-colors">ACB@50</a>
+<a href="portfolio.html" class="text-gold">Portfolio</a>
+<a href="impact.html" class="text-ivory/70 hover:text-gold transition-colors">Impact</a>
+<a href="journal.html" class="text-ivory/70 hover:text-gold transition-colors">Journal</a>
+<a href="work-with-us.html" class="text-ivory/70 hover:text-gold transition-colors">Work With Us</a>
+<a href="contact.html" class="text-ivory/70 hover:text-gold transition-colors">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero relative flex items-center justify-center min-h-[50vh] overflow-hidden">
+  <div class="absolute inset-0 hero-placeholder"></div>
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 text-center px-6 max-w-5xl mx-auto pt-24">
+    <p class="font-accent text-gold text-lg tracking-[0.3em] uppercase mb-6 reveal">Gallery</p>
+    <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight mb-6 reveal stagger-1">Portfolio</h1>
+    <p class="text-ivory/60 text-lg max-w-2xl mx-auto reveal stagger-2">A visual journey through our creative output.</p>
+  </div>
+</section>
+
+<!-- FILTER + GALLERY -->
+<section class="py-16 md:py-24 px-6 md:px-12 lg:px-24">
+  <div class="max-w-7xl mx-auto">
+    <!-- Filters -->
+    <div class="flex flex-wrap gap-3 justify-center mb-16 reveal">
+      <button class="portfolio-filter-btn active" data-filter="all">All</button>
+      <button class="portfolio-filter-btn" data-filter="experiences">Experiences</button>
+      <button class="portfolio-filter-btn" data-filter="film">Film</button>
+      <button class="portfolio-filter-btn" data-filter="culture">Culture</button>
+      <button class="portfolio-filter-btn" data-filter="training">Training</button>
+      <button class="portfolio-filter-btn" data-filter="events">Events</button>
+      <button class="portfolio-filter-btn" data-filter="storytelling">Storytelling</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6" id="portfolio-grid">
+      <div class="portfolio-item rounded-xl overflow-hidden aspect-[4/5] reveal stagger-1" data-category="experiences">
+        <div class="placeholder-img w-full h-full p-6">ACB@50<br><span class="text-xs opacity-50">Signature Experience</span></div>
+        <div class="portfolio-overlay absolute inset-0 flex items-end p-6"><div><p class="font-display text-lg font-bold">ACB@50</p><p class="text-ivory/50 text-sm">Creative Experience</p></div></div>
+      </div>
+      <div class="portfolio-item rounded-xl overflow-hidden aspect-square reveal stagger-2" data-category="culture">
+        <div class="placeholder-img w-full h-full p-6">Kukus of Ijebu-Ode<br><span class="text-xs opacity-50">Heritage</span></div>
+        <div class="portfolio-overlay absolute inset-0 flex items-end p-6"><div><p class="font-display text-lg font-bold">The Kukus</p><p class="text-ivory/50 text-sm">Heritage Initiative</p></div></div>
+      </div>
+      <div class="portfolio-item rounded-xl overflow-hidden aspect-[4/5] reveal stagger-3" data-category="film">
+        <div class="placeholder-img w-full h-full p-6">Koma<br><span class="text-xs opacity-50">Film</span></div>
+        <div class="portfolio-overlay absolute inset-0 flex items-end p-6"><div><p class="font-display text-lg font-bold">Koma</p><p class="text-ivory/50 text-sm">Film & Storytelling</p></div></div>
+      </div>
+      <div class="portfolio-item rounded-xl overflow-hidden aspect-square reveal stagger-4" data-category="events">
+        <div class="placeholder-img w-full h-full p-6">Thanksgiving<br><span class="text-xs opacity-50">Event</span></div>
+        <div class="portfolio-overlay absolute inset-0 flex items-end p-6"><div><p class="font-display text-lg font-bold">Thanksgiving Service</p><p class="text-ivory/50 text-sm">Events</p></div></div>
+      </div>
+      <div class="portfolio-item rounded-xl overflow-hidden aspect-[4/5] reveal stagger-5" data-category="training">
+        <div class="placeholder-img w-full h-full p-6">Creative Workshop<br><span class="text-xs opacity-50">Training</span></div>
+        <div class="portfolio-overlay absolute inset-0 flex items-end p-6"><div><p class="font-display text-lg font-bold">Creative Workshop</p><p class="text-ivory/50 text-sm">Training Programme</p></div></div>
+      </div>
+      <div class="portfolio-item rounded-xl overflow-hidden aspect-square reveal stagger-6" data-category="storytelling">
+        <div class="placeholder-img w-full h-full p-6">Documentary<br><span class="text-xs opacity-50">Storytelling</span></div>
+        <div class="portfolio-overlay absolute inset-0 flex items-end p-6"><div><p class="font-display text-lg font-bold">Community Stories</p><p class="text-ivory/50 text-sm">Storytelling</p></div></div>
+      </div>
+      <div class="portfolio-item rounded-xl overflow-hidden aspect-[4/5] reveal stagger-1" data-category="experiences">
+        <div class="placeholder-img w-full h-full p-6">UK Gatherings<br><span class="text-xs opacity-50">Experience</span></div>
+        <div class="portfolio-overlay absolute inset-0 flex items-end p-6"><div><p class="font-display text-lg font-bold">UK Gatherings</p><p class="text-ivory/50 text-sm">Diaspora Experience</p></div></div>
+      </div>
+      <div class="portfolio-item rounded-xl overflow-hidden aspect-square reveal stagger-2" data-category="culture">
+        <div class="placeholder-img w-full h-full p-6">Art Installation<br><span class="text-xs opacity-50">Culture</span></div>
+        <div class="portfolio-overlay absolute inset-0 flex items-end p-6"><div><p class="font-display text-lg font-bold">Art Installation</p><p class="text-ivory/50 text-sm">Cultural Exhibition</p></div></div>
+      </div>
+      <div class="portfolio-item rounded-xl overflow-hidden aspect-[4/5] reveal stagger-3" data-category="events">
+        <div class="placeholder-img w-full h-full p-6">Italy Roadshow<br><span class="text-xs opacity-50">Event</span></div>
+        <div class="portfolio-overlay absolute inset-0 flex items-end p-6"><div><p class="font-display text-lg font-bold">Italy Roadshow</p><p class="text-ivory/50 text-sm">International Event</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 px-6 md:px-12 lg:px-24 bg-onyx-light">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 reveal">Like What You See?</h2>
+    <p class="text-ivory/60 text-lg mb-10 reveal stagger-1">Let us bring the same creative excellence to your project.</p>
+    <a href="work-with-us.html" class="btn-gold magnetic px-8 py-4 rounded-full text-sm tracking-widest uppercase reveal stagger-2"><span>Work With Us</span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-gold/10 py-12 px-6 md:px-12 lg:px-24">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+<a href="index.html" class="block w-24 md:w-32"><img src="lani-logo-nobg.png" alt="LANI Creatives" class="w-full h-auto object-contain"></a>
+<p class="text-ivory/30 text-sm">&copy; 2025 LANI Creatives. All rights reserved.</p>
+<div class="flex gap-6 text-sm"><a href="#" class="footer-link text-ivory/40">Privacy</a><a href="#" class="footer-link text-ivory/40">Terms</a></div>
+</div>
+</footer>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+<script>
+// Portfolio Filter
+document.querySelectorAll('.portfolio-filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.portfolio-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('#portfolio-grid > div').forEach(item => {
+      if (filter === 'all' || item.dataset.category === filter) {
+        item.style.display = '';
+        item.style.opacity = '0';
+        item.style.transform = 'scale(0.95)';
+        setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; item.style.transition = 'all 0.4s ease'; }, 50);
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

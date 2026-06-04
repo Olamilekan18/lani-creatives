@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — LANI Creatives | Premium African Creative Platform</title>
+<meta name="description" content="LANI Creatives is a premium African creative, cultural and experience platform. Discover our story, mission, vision and philosophy.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/animations.css">
+<link rel="stylesheet" href="./css/pages.css">
+<script>
+tailwind.config={theme:{extend:{colors:{'cream':'#F5F1E7','cream-dark':'#EBE5D9','gold':'#d4af37','gold-light':'#e5c158','gold-dark':'#aa8c2c','onyx':'#0a0a0c','onyx-light':'#161619'},fontFamily:{display:['"Playfair Display"','serif'],body:['"Outfit"','sans-serif']}}}}
+</script>
+</head>
+<body class="bg-cream text-onyx font-body overflow-x-hidden selection:bg-gold selection:text-onyx antialiased">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="navbar nav-animated fixed top-0 left-0 w-full z-50 py-6 px-6 md:px-12 flex items-center justify-between bg-transparent">
+<a href="./index.html" class="block w-24 md:w-32"><img src="./lani-logo-nobg.png" alt="LANI Creatives" class="w-full h-auto object-contain"></a>
+<div class="hidden md:flex items-center gap-8 text-sm tracking-widest uppercase">
+  <a href="./about.html" class="nav-link active text-gold">About</a>
+  <div class="nav-dropdown relative group">
+    <button class="nav-link text-onyx/70 hover:text-gold flex items-center gap-1">Our Work <svg class="w-3 h-3 mt-0.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+    <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-56 bg-cream-dark/95 backdrop-blur-xl border border-gold/20 rounded-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+      <a href="./our-work.html" class="block px-4 py-3 rounded-lg text-onyx/70 hover:text-gold hover:bg-cream-dark/50 transition-colors text-xs tracking-widest">Our Work</a>
+      <a href="./portfolio.html" class="block px-4 py-3 rounded-lg text-onyx/70 hover:text-gold hover:bg-cream-dark/50 transition-colors text-xs tracking-widest">Portfolio</a>
+    </div>
+  </div>
+  <a href="./acb50.html" class="nav-link text-onyx/70 hover:text-gold">ACB@50</a>
+  <a href="./impact.html" class="nav-link text-onyx/70 hover:text-gold">Impact</a>
+  <div class="nav-dropdown relative group">
+    <button class="nav-link text-onyx/70 hover:text-gold flex items-center gap-1">Insights <svg class="w-3 h-3 mt-0.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+    <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-56 bg-cream-dark/95 backdrop-blur-xl border border-gold/20 rounded-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+      <a href="./journal.html" class="block px-4 py-3 rounded-lg text-onyx/70 hover:text-gold hover:bg-cream-dark/50 transition-colors text-xs tracking-widest">Journal</a>
+      <a href="./publications.html" class="block px-4 py-3 rounded-lg text-onyx/70 hover:text-gold hover:bg-cream-dark/50 transition-colors text-xs tracking-widest">Publications</a>
+    </div>
+  </div>
+  <a href="./work-with-us.html" class="nav-link text-onyx/70 hover:text-gold">Work With Us</a>
+  <a href="./contact.html" class="btn-gold magnetic px-5 py-2.5 rounded-full text-xs tracking-widest"><span>Contact</span></a>
+</div>
+<button id="menu-toggle" class="hamburger md:hidden flex flex-col gap-1.5 z-50"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 bg-cream-dark/98 flex flex-col items-center justify-center gap-6 text-lg tracking-widest uppercase md:hidden">
+<a href="./about.html" class="text-gold">About</a>
+<a href="./our-work.html" class="text-onyx/70 hover:text-gold transition-colors">Our Work</a>
+<a href="./acb50.html" class="text-onyx/70 hover:text-gold transition-colors">ACB@50</a>
+<a href="./portfolio.html" class="text-onyx/70 hover:text-gold transition-colors">Portfolio</a>
+<a href="./impact.html" class="text-onyx/70 hover:text-gold transition-colors">Impact</a>
+<a href="./journal.html" class="text-onyx/70 hover:text-gold transition-colors">Journal</a>
+<a href="./publications.html" class="text-onyx/70 hover:text-gold transition-colors">Publications</a>
+<a href="./work-with-us.html" class="text-onyx/70 hover:text-gold transition-colors">Work With Us</a>
+<a href="./contact.html" class="text-onyx/70 hover:text-gold transition-colors">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero relative flex items-center justify-center min-h-[60vh] overflow-hidden">
+  <div class="absolute inset-0 hero-placeholder"></div>
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 text-center px-6 max-w-5xl mx-auto pt-24">
+    <p class="font-accent text-gold text-lg md:text-xl tracking-[0.3em] uppercase mb-6 reveal stagger-1">Who We Are</p>
+    <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight mb-6 reveal stagger-1">Reimagining African<br class="hidden md:block"/>Creative Excellence</h1>
+    <p class="text-onyx/60 text-lg md:text-xl max-w-2xl mx-auto reveal stagger-2">Creativity as a cultural asset. An economic driver. A profound development tool.</p>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="py-24 md:py-32 px-6 md:px-12 lg:px-24">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <div>
+      <p class="text-gold text-sm tracking-[0.3em] uppercase mb-4 reveal">Our Story</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 reveal stagger-1">Born From a Deep Love<br>for African Creativity</h2>
+      <span class="section-divider-light block mb-8 line-animated"></span>
+      <p class="text-onyx/60 text-lg leading-relaxed mb-6 reveal stagger-2">LANI Creatives is a premium African creative, cultural and experience platform operating at the intersection of storytelling, culture, media, events, heritage preservation, creative enterprise, and innovation.</p>
+      <p class="text-onyx/60 leading-relaxed mb-6 reveal stagger-3">We exist because we believe African creativity deserves a platform that matches its depth, ambition, and global significance. Our work spans the full creative spectrum — from intimate cultural documentation to landmark celebrations that redefine what's possible.</p>
+      <p class="text-onyx/60 leading-relaxed reveal stagger-4">Through our inaugural signature project — ACB@50 — visitors experience the full depth of LANI Creatives' work, from concept to execution, content creation, guest experience, branding, and legacy documentation.</p>
+    </div>
+    <div class="img-reveal rounded-xl overflow-hidden aspect-[4/5]">
+      <div class="placeholder-img-light w-full h-full rounded-xl text-center p-8">YOUR IMAGE HERE<br><span class="text-xs opacity-50 mt-2 block">Team / Brand Photo</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-cream-dark">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-20">
+      <p class="text-gold text-sm tracking-[0.3em] uppercase mb-4 reveal">What Drives Us</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold reveal stagger-1">Mission & Vision</h2>
+      <span class="section-divider-light mx-auto mt-6 line-animated"></span>
+    </div>
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="service-card-light rounded-2xl p-10 reveal stagger-1">
+        <div class="text-gold/80 text-4xl mb-6">◈</div>
+        <h3 class="font-display text-2xl font-bold mb-4 text-gold">Our Mission</h3>
+        <p class="text-onyx/60 leading-relaxed">To redefine African narratives through world-class creative delivery, building bridges between tradition and modernity. We aim to establish LANI Creatives as the benchmark for premium African creative, cultural and experience production.</p>
+      </div>
+      <div class="service-card-light rounded-2xl p-10 reveal stagger-2">
+        <div class="text-gold/80 text-4xl mb-6">✦</div>
+        <h3 class="font-display text-2xl font-bold mb-4 text-gold">Our Vision</h3>
+        <p class="text-onyx/60 leading-relaxed">A world where African creativity is recognized, celebrated, and invested in as a fundamental driver of cultural progress, economic growth, and human development — not as an afterthought, but as a leading force.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY WE EXIST -->
+<section class="py-24 md:py-32 px-6 md:px-12 lg:px-24">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <div class="img-reveal rounded-xl overflow-hidden aspect-[5/4]">
+      <div class="placeholder-img-light w-full h-full rounded-xl text-center p-8">YOUR IMAGE HERE<br><span class="text-xs opacity-50 mt-2 block">Cultural Heritage</span></div>
+    </div>
+    <div>
+      <p class="text-gold text-sm tracking-[0.3em] uppercase mb-4 reveal">Our Purpose</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 reveal stagger-1">Why We Exist</h2>
+      <span class="section-divider-light block mb-8 line-animated"></span>
+      <p class="text-onyx/60 text-lg leading-relaxed mb-6 reveal stagger-2">African creativity has always been extraordinary. What's been missing is the infrastructure, the intentionality, and the platform to present it at the level it deserves.</p>
+      <p class="text-onyx/60 leading-relaxed reveal stagger-3">We exist to fill that gap — to create a space where African stories are told with care, where cultural moments are designed with precision, and where creative talent is nurtured into lasting impact.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OUR PHILOSOPHY -->
+<section class="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-cream-dark">
+  <div class="max-w-7xl mx-auto text-center mb-16">
+    <p class="text-gold text-sm tracking-[0.3em] uppercase mb-4 reveal">Our Philosophy</p>
+    <h2 class="font-display text-4xl md:text-5xl font-bold reveal stagger-1">Creativity As…</h2>
+    <span class="section-divider-light mx-auto mt-6 line-animated"></span>
+  </div>
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+    <div class="service-card-light rounded-2xl p-10 text-center reveal stagger-1">
+      <div class="w-20 h-20 mx-auto mb-6 rounded-full border-2 border-gold/30 flex items-center justify-center">
+        <svg class="w-10 h-10 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <h3 class="font-display text-2xl font-bold mb-4 text-gold">Cultural Asset</h3>
+      <p class="text-onyx/50 leading-relaxed">Creativity is the soul of a people. We treat every project as a cultural contribution — something that enriches the collective narrative of who we are.</p>
+    </div>
+    <div class="service-card-light rounded-2xl p-10 text-center reveal stagger-2">
+      <div class="w-20 h-20 mx-auto mb-6 rounded-full border-2 border-gold/30 flex items-center justify-center">
+        <svg class="w-10 h-10 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+      </div>
+      <h3 class="font-display text-2xl font-bold mb-4 text-gold">Economic Driver</h3>
+      <p class="text-onyx/50 leading-relaxed">The creative economy is Africa's next frontier. We build commercially viable projects that prove creativity is not just expression — it's enterprise.</p>
+    </div>
+    <div class="service-card-light rounded-2xl p-10 text-center reveal stagger-3">
+      <div class="w-20 h-20 mx-auto mb-6 rounded-full border-2 border-gold/30 flex items-center justify-center">
+        <svg class="w-10 h-10 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+      </div>
+      <h3 class="font-display text-2xl font-bold mb-4 text-gold">Development Tool</h3>
+      <p class="text-onyx/50 leading-relaxed">Through mentorship, training, and community programmes, we leverage creativity as a vehicle for social development and generational change.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="py-24 md:py-32 px-6 md:px-12 lg:px-24">
+  <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div class="reveal stagger-1 p-6 rounded-xl border border-gold/20 bg-cream-dark/50">
+      <p class="impact-number" data-count="2024" data-suffix="">0</p>
+      <p class="text-onyx/50 text-sm mt-2">Founded</p>
+    </div>
+    <div class="reveal stagger-2 p-6 rounded-xl border border-gold/20 bg-cream-dark/50">
+      <p class="impact-number" data-count="50" data-suffix="+">0</p>
+      <p class="text-onyx/50 text-sm mt-2">Creatives Trained</p>
+    </div>
+    <div class="reveal stagger-3 p-6 rounded-xl border border-gold/20 bg-cream-dark/50">
+      <p class="font-display text-4xl md:text-5xl text-gold leading-none">Lagos</p>
+      <p class="text-onyx/50 text-sm mt-2">Headquarters</p>
+    </div>
+    <div class="reveal stagger-4 p-6 rounded-xl border border-gold/20 bg-cream-dark/50">
+      <p class="font-display text-4xl md:text-5xl text-gold leading-none">∞</p>
+      <p class="text-onyx/50 text-sm mt-2">Cultural Impact</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-cream-dark">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 reveal">Ready to Create Something Extraordinary?</h2>
+    <p class="text-onyx/60 text-lg mb-10 reveal stagger-1">Partner with Africa's premium creative platform.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center reveal stagger-2">
+      <a href="./work-with-us.html" class="btn-gold magnetic px-8 py-4 rounded-full text-sm tracking-widest uppercase"><span>Work With Us</span></a>
+      <a href="./contact.html" class="btn-outline-gold magnetic px-8 py-4 rounded-full text-sm tracking-widest uppercase">Get In Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-gold/20 py-12 px-6 md:px-12 lg:px-24">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+<a href="./index.html" class="block w-24 md:w-32"><img src="./lani-logo-nobg.png" alt="LANI Creatives" class="w-full h-auto object-contain"></a>
+<p class="text-onyx/30 text-sm">&copy; 2025 LANI Creatives. All rights reserved.</p>
+<div class="flex gap-6 text-sm">
+<a href="#" class="footer-link text-onyx/40">Privacy</a>
+<a href="#" class="footer-link text-onyx/40">Terms</a>
+</div>
+</div>
+</footer>
+
+<script src="./js/animations.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
+

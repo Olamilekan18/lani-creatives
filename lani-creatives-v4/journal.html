@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal & Insights — LANI Creatives</title>
+<meta name="description" content="Thought leadership and insights from LANI Creatives on culture, storytelling, creative economies, and African identity.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/animations.css">
+<link rel="stylesheet" href="./css/pages.css">
+<script>tailwind.config={theme:{extend:{colors:{'cream':'#F5F1E7','cream-dark':'#EBE5D9','gold':'#d4af37','gold-light':'#e5c158','gold-dark':'#aa8c2c','onyx':'#0a0a0c','onyx-light':'#161619'},fontFamily:{display:['"Playfair Display"','serif'],body:['"Outfit"','sans-serif']}}}}</script>
+</head>
+<body class="bg-cream text-onyx font-body overflow-x-hidden selection:bg-gold selection:text-onyx antialiased">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="navbar nav-animated fixed top-0 left-0 w-full z-50 py-6 px-6 md:px-12 flex items-center justify-between bg-transparent">
+<a href="./index.html" class="block w-24 md:w-32"><img src="./lani-logo-nobg.png" alt="LANI Creatives" class="w-full h-auto object-contain"></a>
+<div class="hidden md:flex items-center gap-8 text-sm tracking-widest uppercase">
+  <a href="./about.html" class="nav-link text-onyx/70 hover:text-gold">About</a>
+  <div class="nav-dropdown relative group">
+    <button class="nav-link text-onyx/70 hover:text-gold flex items-center gap-1">Our Work <svg class="w-3 h-3 mt-0.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+    <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-56 bg-cream-dark/95 backdrop-blur-xl border border-gold/20 rounded-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+      <a href="./our-work.html" class="block px-4 py-3 rounded-lg text-onyx/70 hover:text-gold hover:bg-cream-dark/50 transition-colors text-xs tracking-widest">Our Work</a>
+      <a href="./portfolio.html" class="block px-4 py-3 rounded-lg text-onyx/70 hover:text-gold hover:bg-cream-dark/50 transition-colors text-xs tracking-widest">Portfolio</a>
+    </div>
+  </div>
+  <a href="./acb50.html" class="nav-link text-onyx/70 hover:text-gold">ACB@50</a>
+  <a href="./impact.html" class="nav-link text-onyx/70 hover:text-gold">Impact</a>
+  <div class="nav-dropdown relative group">
+    <button class="nav-link active text-gold flex items-center gap-1">Insights <svg class="w-3 h-3 mt-0.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+    <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-56 bg-cream-dark/95 backdrop-blur-xl border border-gold/20 rounded-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+      <a href="./journal.html" class="block px-4 py-3 rounded-lg text-gold hover:bg-cream-dark/50 transition-colors text-xs tracking-widest">Journal</a>
+      <a href="./publications.html" class="block px-4 py-3 rounded-lg text-onyx/70 hover:text-gold hover:bg-cream-dark/50 transition-colors text-xs tracking-widest">Publications</a>
+    </div>
+  </div>
+  <a href="./work-with-us.html" class="nav-link text-onyx/70 hover:text-gold">Work With Us</a>
+  <a href="./contact.html" class="btn-gold magnetic px-5 py-2.5 rounded-full text-xs tracking-widest"><span>Contact</span></a>
+</div>
+<button id="menu-toggle" class="hamburger md:hidden flex flex-col gap-1.5 z-50"><span></span><span></span><span></span></button>
+</nav>
+<div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 bg-cream-dark/98 flex flex-col items-center justify-center gap-6 text-lg tracking-widest uppercase md:hidden">
+<a href="./about.html" class="text-onyx/70 hover:text-gold transition-colors">About</a>
+<a href="./our-work.html" class="text-onyx/70 hover:text-gold transition-colors">Our Work</a>
+<a href="./acb50.html" class="text-onyx/70 hover:text-gold transition-colors">ACB@50</a>
+<a href="./impact.html" class="text-onyx/70 hover:text-gold transition-colors">Impact</a>
+<a href="./journal.html" class="text-gold">Journal</a>
+<a href="./publications.html" class="text-onyx/70 hover:text-gold transition-colors">Publications</a>
+<a href="./work-with-us.html" class="text-onyx/70 hover:text-gold transition-colors">Work With Us</a>
+<a href="./contact.html" class="text-onyx/70 hover:text-gold transition-colors">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero relative flex items-center justify-center min-h-[60vh] overflow-hidden">
+  <div class="absolute inset-0 hero-placeholder"></div>
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 text-center px-6 max-w-5xl mx-auto pt-24">
+    <p class="font-accent text-gold text-lg tracking-[0.3em] uppercase mb-6 reveal">Insights & Journal</p>
+    <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight mb-6 reveal stagger-1">Thought Leadership</h1>
+    <p class="text-onyx/60 text-lg max-w-2xl mx-auto reveal stagger-2">Perspectives on culture, creativity, and the African narrative.</p>
+  </div>
+</section>
+
+<!-- FEATURED ARTICLE -->
+<section class="py-24 md:py-32 px-6 md:px-12 lg:px-24">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="img-reveal rounded-xl overflow-hidden aspect-[16/10]"><div class="placeholder-img-light w-full h-full rounded-xl p-8">Featured Article Image</div></div>
+    <div>
+      <span class="text-gold/60 text-xs tracking-widest uppercase mb-2 block reveal">Featured · Culture · May 2025</span>
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-4 reveal stagger-1">When Cultural Amnesia Threatens National Identity</h2>
+      <p class="text-onyx/60 leading-relaxed mb-6 reveal stagger-2">An exploration of how the erosion of cultural memory endangers the very fabric of national consciousness — and what creatives can do to reverse it.</p>
+      <a href="#" class="text-gold text-sm tracking-widest uppercase flex items-center gap-2 hover:gap-4 transition-all reveal stagger-3">Read Article <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES GRID -->
+<section class="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-cream-dark">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="font-display text-4xl font-bold reveal">All Articles</h2>
+      <span class="section-divider-light mx-auto mt-6 line-animated"></span>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <article class="article-card-light reveal stagger-1">
+        <div class="placeholder-img-light aspect-video">Article Image</div>
+        <div class="p-6">
+          <p class="text-gold/60 text-xs tracking-widest uppercase mb-2">Media · April 2025</p>
+          <h3 class="font-display text-lg font-bold mb-2 hover:text-gold transition-colors cursor-pointer">Why Storytelling Matters in the Age of Algorithms</h3>
+          <p class="text-onyx/40 text-sm leading-relaxed">How authentic narratives cut through digital noise and create lasting cultural impact.</p>
+        </div>
+      </article>
+      <article class="article-card-light reveal stagger-2">
+        <div class="placeholder-img-light aspect-video">Article Image</div>
+        <div class="p-6">
+          <p class="text-gold/60 text-xs tracking-widest uppercase mb-2">Economy · March 2025</p>
+          <h3 class="font-display text-lg font-bold mb-2 hover:text-gold transition-colors cursor-pointer">Building Creative Economies Across Africa</h3>
+          <p class="text-onyx/40 text-sm leading-relaxed">The infrastructure, policy, and talent pipeline needed to unlock Africa's creative potential.</p>
+        </div>
+      </article>
+      <article class="article-card-light reveal stagger-3">
+        <div class="placeholder-img-light aspect-video">Article Image</div>
+        <div class="p-6">
+          <p class="text-gold/60 text-xs tracking-widest uppercase mb-2">Events · February 2025</p>
+          <h3 class="font-display text-lg font-bold mb-2 hover:text-gold transition-colors cursor-pointer">Designing Experiences That Matter</h3>
+          <p class="text-onyx/40 text-sm leading-relaxed">Behind the philosophy of intentional experience design and why details make the difference.</p>
+        </div>
+      </article>
+      <article class="article-card-light reveal stagger-4">
+        <div class="placeholder-img-light aspect-video">Article Image</div>
+        <div class="p-6">
+          <p class="text-gold/60 text-xs tracking-widest uppercase mb-2">Case Study · January 2025</p>
+          <h3 class="font-display text-lg font-bold mb-2 hover:text-gold transition-colors cursor-pointer">Lessons from ACB@50: A Production Retrospective</h3>
+          <p class="text-onyx/40 text-sm leading-relaxed">What we learned producing our most ambitious project and how it shaped our approach.</p>
+        </div>
+      </article>
+      <article class="article-card-light reveal stagger-5">
+        <div class="placeholder-img-light aspect-video">Article Image</div>
+        <div class="p-6">
+          <p class="text-gold/60 text-xs tracking-widest uppercase mb-2">Innovation · December 2024</p>
+          <h3 class="font-display text-lg font-bold mb-2 hover:text-gold transition-colors cursor-pointer">Creativity as Africa's New Global Currency</h3>
+          <p class="text-onyx/40 text-sm leading-relaxed">The rise of African creatives on the world stage and the economic opportunities it unlocks.</p>
+        </div>
+      </article>
+      <article class="article-card-light reveal stagger-6">
+        <div class="placeholder-img-light aspect-video">Article Image</div>
+        <div class="p-6">
+          <p class="text-gold/60 text-xs tracking-widest uppercase mb-2">Heritage · November 2024</p>
+          <h3 class="font-display text-lg font-bold mb-2 hover:text-gold transition-colors cursor-pointer">Documenting Heritage: The Kukus of Ijebu-Ode</h3>
+          <p class="text-onyx/40 text-sm leading-relaxed">A deep dive into our cultural documentation project preserving Yoruba heritage stories.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-gold/20 py-12 px-6 md:px-12 lg:px-24">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+<a href="./index.html" class="block w-24 md:w-32"><img src="./lani-logo-nobg.png" alt="LANI Creatives" class="w-full h-auto object-contain"></a>
+<p class="text-onyx/30 text-sm">&copy; 2025 LANI Creatives. All rights reserved.</p>
+<div class="flex gap-6 text-sm"><a href="#" class="footer-link text-onyx/40">Privacy</a><a href="#" class="footer-link text-onyx/40">Terms</a></div>
+</div>
+</footer>
+<script src="./js/animations.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
+
