@@ -7,6 +7,17 @@
   overflow: hidden;
   background: linear-gradient(135deg, var(--color-cream) 0%, #E8E2D4 100%);
 }
+.hero-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 241, 231, 0.3) 0%,
+    rgba(245, 241, 231, 0.6) 50%,
+    rgba(245, 241, 231, 0.95) 100%
+  );
+}
+.hero-placeholder {
+  background: linear-gradient(135deg, #EBE5D9 0%, #F5F1E7 50%, #DDD8CC 100%);
+}
 
 /* Nav Dropdown */
 .nav-dropdown-menu {
