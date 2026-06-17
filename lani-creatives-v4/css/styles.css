@@ -93,3 +93,15 @@ body {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
+/* --- Navbar size adjustments --- */
+.navbar {
+  transition: background 0.5s ease, padding 0.5s ease, border 0.5s ease, box-shadow 0.5s ease !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.navbar.glass-panel {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
