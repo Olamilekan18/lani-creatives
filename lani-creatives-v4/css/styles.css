@@ -97,11 +97,29 @@ body {
 /* --- Navbar size adjustments --- */
 .navbar {
   transition: background 0.5s ease, padding 0.5s ease, border 0.5s ease, box-shadow 0.5s ease !important;
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
+  padding-top: 0.4rem !important;
+  padding-bottom: 0.4rem !important;
 }
 
 .navbar.glass-panel {
-  padding-top: 0.75rem !important;
-  padding-bottom: 0.75rem !important;
+  padding-top: 0.2rem !important;
+  padding-bottom: 0.2rem !important;
+}
+
+.navbar img {
+  height: 24px !important;
+  width: auto !important;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  .navbar > div {
+    max-width: 1200px !important;
+  }
+  .navbar img {
+    height: 28px !important;
+  }
 }
